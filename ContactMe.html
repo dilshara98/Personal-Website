@@ -1,226 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <meta charset="UTF-8">
-  <head>
-    <title>Contact Me</title>
 
-<!--This is a Contact Me Page-->
+<head>
+  <title>Contact Me</title>
 
-  <link rel="stylesheet" type="text/css" href="mystyle.css">
+  <!--This is a Contact Me Page-->
+
+  <link rel="stylesheet" type="text/css" href="style.css">
 
   <script type="text/javascript">
-   
-   function notEmpty(element,helperMsg){
-       if(element.value.length==0){
-           alert(helperMsg);
-           element.focus();
-           return false;
-       }
-          return true;
-   }
+
+    function notEmpty(element, helperMsg) {
+      if (element.value.length == 0) {
+        alert(helperMsg);
+        element.focus();
+        return false;
+      }
+      return true;
+    }
 
 
-   function sayOk(){
-        window.alert("Your form is saved!");
-   }
+    function sayOk() {
+      window.alert("Your form is saved!");
+    }
 
-   function sayGuidlines(){
-       window.alert("please upload a recent fo you for following specifications.1.Format:JPGE 2.Size:250*200");
-   }
+    function sayGuidlines() {
+      window.alert("please upload a recent fo you for following specifications.1.Format:JPGE 2.Size:250*200");
+    }
 
-   function sayReset(){
+    function sayReset() {
       window.alert("Are you sure reset");
-   }
+    }
 
-   function saySubmit(){
+    function saySubmit() {
       window.alert("Your form is submitted!");
-   }
+    }
 
-    function display(){
+    function display() {
       window.alert("Page is loaded!");
-   }
+    }
 
-   function viewMsg(){
-        window.alert("Fill this");
-   }
+    function viewMsg() {
+      window.alert("Fill this");
+    }
 
-</script>
+  </script>
 </head>
 
-<style type="text/css">
+<body id="contact-body" onload="display()">
 
-.button{
- background-color:teal;
- border:1px solid black;
- color:black;
- width:100px;
- padding:10px 30px;
- text-align:center;
- text-decoration:none;
- display:inline-block;
- font-size:15px;
- margin:5px 2px;
- cursor:pointer;
- border-radius:8px;
-}
+  <!-- This is the menu common to all pages. -->
 
-.b{
-    background-color:#808002;
-    width:1225px;
-    padding:10px;
-    margin-top:50px;
-    position:static;
-    border-radius: 10;
-}
+  <div class="topnav">
+    <a href="index.html">HOME</a>
+    <a href="About Me.html">ABOUT ME</a>
+    <a href="Education.html">EDUCATION</a>
+    <a href="ContactMe.html" class="active">CONTACT ME</a>
+  </div><br><br>
 
-input[type=text]{
-  width:100%; 
-  background-color:3f1f1;
-  color:white;
-  padding:14px 20px;
-  margin:8px 0;
-  border:2px solid lightgrey;
-  border-radius:4px;
-  cursor:pointer;
-  box-sizing:border-box;
-  outline:none;
-}
+  <!-- This content is only for the Contact Me page.-->
 
-input[type=email]{
-  width:100%; 
-  background-color:3f1f1;
-  color:white;
-  padding:14px 20px;
-  margin:8px 0;
-  border:2px solid lightgrey;
-  border-radius:4px;
-  cursor:pointer;
-  box-sizing:border-box;
-  outline:none;
-}
+  <div class="b">
+    <h2 style="color:lightgreen;font-family:Baskerville Old Face;" ;>
+      <big>&nbsp&nbspIF&nbspYOU&nbspWANT&nbspTO&nbspCONTACT&nbspME&nbspFILL&nbspTHAT&nbspFORM&nbspCORRECTLY..</big>
+    </h2>
+    <h3 class="form">
+      <form action="ContactMe.html" onSubmit="saySubmit()" onReset="sayReset()">
 
-input[type=date]{
-  width:100%; 
-  background-color:3f1f1;
-  color:white;
-  padding:14px 20px;
-  margin:8px 0;
-  border:2px solid lightgrey;
-  border-radius:4px;
-  cursor:pointer;
-  box-sizing:border-box;
-  outline:none;
-}
+        <p><b>
+            <fieldset>
 
-input[type=file]{
-  width:25%; 
-  background-color:3f1f1;
-  color:white;
-  padding:14px 20px;
-  margin:8px 0;
-  border:2px solid lightgrey;
-  border-radius:4px;
-  cursor:pointer;
-  box-sizing:border-box;
-  outline:none;
-}
+              <legend><u>
+                  <h2>Personal Details</h2>
+                </u></legend>
+              <ol>
+                <li>Your Name <input name="name" type="text" MAXLENGTH=30 SIZE=30 placeholder="Name.."
+                    id="name" /><br><br></li>
+                <li>Your NIC Num <input name="id" type="text" MAXLENGTH=30 SIZE=30 placeholder="NIC Number.." /><br><br>
+                </li>
+                <li>Your Address <input name="add" type="text" MAXLENGTH=30 SIZE=30 placeholder="Address.." /><br><br>
+                </li>
+                <li>Your Birthday <input name="bday" type="date" /><br><br></li>
+                <li>Your E-mail <input name="email" type="email" MAXLENGTH=30 SIZE=30 placeholder="E-mail.." /><br><br>
+                </li>
+                <li>Your GitHub Link <input name="github" type="text" MAXLENGTH=30 SIZE=30
+                    placeholder="GitHub Link.." /><br></li>
 
-input:focus{
-  background-color:lightblue;
-}
+                <p><b>
+                    <li>Have you a passport </li>
+                  </b>
+                <H5><input name="pp" value="yes" type="radio">YES
+                  <input name="pp" value="no" type="radio">NO<br>
+                </H5>
+        </p>
 
-select{
- width:25%;
- padding:14px 20px;
- border:2px solid grey;
- border-radius:4px;
- background-color:#f1f1f1;
-}
+        <p>
+          <li>Why did you want to connect me?
+            <input name="description" type="text" MAXLENGTH=30 SIZE=30 placeholder="Text Something.." </li>
+        </p>
 
-h3{
- color:black;
- margin-left:10px;
- font-family:Baskerville Old Face;
- }
+        <p><b>
+            <li>Gender </li>
+          </b>
+        <H5><input name="gender" value="male" type="radio"> &nbsp&nbsp Male
+          <input name="gender" value="female" type="radio"> &nbsp&nbsp Female<br>
+        </H5>
+        </p>
 
-</style>
+        <li>Your University <input name="uni" type="text" MAXLENGTH=50 SIZE=50 placeholder="University.." /><br></li>
 
-<body id="body" onload="display()">
-
-<!-- This is the menu common to all pages. -->
-
-<div class="topnav">
-  <a href="Home.html">HOME</a>
-  <a href="About Me.html">ABOUT ME</a>
-  <a href="Education.html">EDUCATION</a>
-  <a href="PhotoGallary.html">PHOTO GALLERY</a>
-  <a href="ContactMe.html" class="active">CONTACT ME</a>
-</div><br><br>
-
-<!-- This content is only for the Contact Me page.-->
-
-<div class="b">
-<h2 style="color:lightgreen;font-family:Baskerville Old Face;";><big>&nbsp&nbspIF&nbspYOU&nbspWANT&nbspTO&nbspCONTACT&nbspME&nbspFILL&nbspTHAT&nbspFORM&nbspCORRECTLY..</big></h2>
-<h3>
-<form action="ContactMe.html" onSubmit="saySubmit()" onReset="sayReset()" >
-
-<p><b>
-<fieldset>
-
- <legend><u><h2>Personal Details</h2></u></legend>
-<ol>
-<li>Your  Name  <input name="name" type="text" MAXLENGTH=30 SIZE=30 placeholder="Name.."  id="name" /><br><br></li>
-<li>Your NIC Num <input name="id" type="text" MAXLENGTH=30 SIZE=30 placeholder="NIC Number.."/><br><br></li>
-<li>Your Address <input name="add" type="text" MAXLENGTH=30 SIZE=30 placeholder="Address.."/><br><br></li>
-<li>Your Birthday <input name="bday" type="date" /><br><br></li>
-<li>Your E-mail <input name="email" type="email" MAXLENGTH=30 SIZE=30 placeholder="E-mail.."/><br><br></li>
-<li>Your GitHub Link <input name="github" type="text" MAXLENGTH=30 SIZE=30  placeholder="GitHub Link.."/><br></li>
-
-<p><b><li>Have you a passport </li></b>
-<H5><input name="pp" value="yes" type="radio">YES
-<input name="pp" value="no" type="radio">NO<br>
-</H5></p>
-
-<p><li>Why did you want to connect me?
-<input name="description" type="text" MAXLENGTH=30 SIZE=30 placeholder="Text Something.."</li>
-</p>
-
-<p><b><li>Gender </li></b>
-<H5><input name="gender" value="male" type="radio"> &nbsp&nbsp Male
-<input name="gender" value="female" type="radio"> &nbsp&nbsp Female<br>
-</H5></p>
-
-<li>Your University <input name="uni" type="text" MAXLENGTH=50 SIZE=50 placeholder="University.."/><br></li>
-
-<p><b><li>What languages do you can ?</li></b></p>
-<input name="lansinhala" value="sinhala" type="checkbox"> &nbsp Sinhala<br>
-<input name="lanenglish" value="english" type="checkbox"> &nbsp English<br>
-<input name="lantamil" value="tamil" type="checkbox"> &nbsp Tamil<br>
-<input name="lanjapan" value="japan" type="checkbox"> &nbsp Japan<br>
+        <p><b>
+            <li>What languages do you can ?</li>
+          </b></p>
+        <input name="lansinhala" value="sinhala" type="checkbox"> &nbsp Sinhala<br>
+        <input name="lanenglish" value="english" type="checkbox"> &nbsp English<br>
+        <input name="lantamil" value="tamil" type="checkbox"> &nbsp Tamil<br>
+        <input name="lanjapan" value="japan" type="checkbox"> &nbsp Japan<br>
 
 
-<p><b><li>Country </li></b></p><select name="dropdown" ><br>
-<option value="Sri Lanka"selected>Sri Lanka</option>
-<option value="India">India</option>
-<option value="Japan">Japan</option>
-<option value="Chaina">China</option>
-<option value="Other">Other Country</option>
-</select>
-<br>
+        <p><b>
+            <li>Country </li>
+          </b></p><select name="dropdown"><br>
+          <option value="Sri Lanka" selected>Sri Lanka</option>
+          <option value="India">India</option>
+          <option value="Japan">Japan</option>
+          <option value="Chaina">China</option>
+          <option value="Other">Other Country</option>
+        </select>
+        <br>
 
-<p><B><li>Upload Your Image </li></b></p><input type="file" name="fileupload" accept="image/" onblur="sayGuidlines()"><br>
+        <p><B>
+            <li>Upload Your Image </li>
+          </b></p><input type="file" name="fileupload" accept="image/" onblur="sayGuidlines()"><br>
 
 
-<center><input name="pagename" value="5" type="hidden" class="button"/><br>
-<input name="submit" value="Submit" type="submit" class="button" />
-<input name="reset" value="Reset" type="reset" class="button"/>
-<input name="ok" value="Ok" type="button"  class="button" onClick="notEmpty(document.getElementById('name'),'Please Enter Value')"/><br></center>
+        <center><input name="pagename" value="5" type="hidden" class="button" /><br>
+          <input name="submit" value="Submit" type="submit" class="button" />
+          <input name="reset" value="Reset" type="reset" class="button" />
+          <input name="ok" value="Ok" type="button" class="button"
+            onClick="notEmpty(document.getElementById('name'),'Please Enter Value')" /><br>
+        </center>
 
-</fieldset>
-</h3>
-</ol>
-</form>
-</div>
+        </fieldset>
+    </h3>
+    </ol>
+    </form>
+  </div>
 </body>
 
 
